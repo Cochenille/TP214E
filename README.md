@@ -4,7 +4,7 @@ Travail pratique 2 du cours de Conception et Qualité Logicielle au Cégep Garne
 Présenté à Laurent Drolet.
 
 # Membres
-Wylliam Arcand - Cédric Bouchard
+Willyam Arcand - Cédric Bouchard
 
 # Bogues
 1. Le navigateur est fourni un URI plutôt qu'un instance de classe PageCommandes.
