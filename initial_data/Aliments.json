@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "618449307106d58f80a1b9d1"
+  },
+  "Nom": "Carrote",
+  "Quantite": 2,
+  "Unite": "kg",
+  "ExpireLe": "2021-12-18T00:00:00Z"
+},{
+  "_id": {
+    "$oid": "618449307106d58f80a1b9d2"
+  },
+  "Nom": "Concombre",
+  "Quantite": 4,
+  "Unite": "kg",
+  "ExpireLe": "2021-10-18T00:00:00Z"
+},{
+  "_id": {
+    "$oid": "618449307106d58f80a1b9d3"
+  },
+  "Nom": "Boeuf haché",
+  "Quantite": 8,
+  "Unite": "kg",
+  "ExpireLe": "2021-11-05T00:00:00Z"
+},{
+  "_id": {
+    "$oid": "618449307106d58f80a1b9d4"
+  },
+  "Nom": "Porc haché",
+  "Quantite": 6,
+  "Unite": "kg",
+  "ExpireLe": "2021-11-05T00:00:00Z"
+},{
+  "_id": {
+    "$oid": "618449307106d58f80a1b9d5"
+  },
+  "Nom": "Laitue",
+  "Quantite": 500,
+  "Unite": "g",
+  "ExpireLe": "2021-10-18T00:00:00Z"
+},{
+  "_id": {
+    "$oid": "618449307106d58f80a1b9d6"
+  },
+  "Nom": "Tomate",
+  "Quantite": 500,
+  "Unite": "g",
+  "ExpireLe": "2021-11-05T00:00:00Z"
+},{
+  "_id": {
+    "$oid": "618449307106d58f80a1b9d7"
+  },
+  "Nom": "Pain à hamburger brioché",
+  "Quantite": 24,
+  "Unite": "u",
+  "ExpireLe": "2021-11-05T00:00:00Z"
+}]
