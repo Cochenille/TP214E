@@ -1,0 +1,12 @@
+Les membres de l'équipe sont Ludovic Poitras et Gabriel Bernier
+
+Étapes pour corriger le bogue:
+1. Changer le namespace utilisé dans PageCommandes.xaml.cs pour TP214E
+2. La classe dans ce même fichier doit hérité de Page et non de Window
+3. Dans PageCommandes.xaml, changer la balise principal de Window à Page
+4. Dans le même fichier et la même balise, changer la valeur de l'attribut x:Class à « TP214E.PageCommandes » 
+5. Dans le même fichier et la même balise, changer la valeur de l'attribut xmlns:local à « clr-namespace:TP214E »
+6. Dans le fichier PageAccueil.xaml.cs, changer la navigation de la page Accueil vers la 
+	page Commandes en créant un objet PageCommandes avec comme paramètre, le dal
+7. Dans le même fichier, indiquer au NavigationService qu'il doit naviguer vers la page Commandes, 
+	en indiquant en paramètre, l'objet (frmCommandes) que l'on vient juste de créer de type PageCommandes

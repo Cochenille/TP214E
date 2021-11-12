@@ -1,12 +1,52 @@
-﻿<Window x:Class="TP214E.Pages.PageCommandes"
+﻿<Page x:Class="TP214E.PageCommandes"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TP214E.Pages"
+        xmlns:local="clr-namespace:TP214E"
         mc:Ignorable="d"
+        d:DesignHeight="450" d:DesignWidth="800"
         Title="PageCommandes" Height="450" Width="800">
-    <Grid>
-        
+    <Page.Resources>
+        <DataTemplate x:Key="PlatMaquette">
+            <StackPanel Orientation="Horizontal">
+                <Label FontWeight="Bold" Content="{Binding Nom}"/>
+                <Label Content="{Binding Prix}"/>
+            </StackPanel>
+        </DataTemplate>
+
+        <DataTemplate x:Key="CommandeMaquette">
+            <StackPanel Orientation="Horizontal">
+                <Label FontWeight="Bold" Content="{Binding _id}"/>
+            </StackPanel>
+        </DataTemplate>
+
+
+
+    </Page.Resources>
+
+
+
+    <Grid Background="NavajoWhite">
+
+        <Button Content="Créer Commande" Margin="574,391,41,29" Background="LightGreen" FontSize="12" FontFamily="Rockwell" Click="boutonCreerCommande_Click"/>
+        <Button Content="Ajouter Plat" Margin="40,391,575,29" Background="LightGreen" FontSize="12" FontFamily="Rockwell" Click="boutonAjouterPlat_Click"/>
+        <ListBox ItemTemplate="{DynamicResource PlatMaquette}"  Background="PapayaWhip" Margin="303,196,303,29" x:Name="liste_panier"/>
+        <Label Content="Gestions Commandes" Foreground="#FF5F8C5A" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Rockwell" FontSize="36" FontWeight="Normal" Height="52" Width="440" Margin="0,10,0,0"/>
+        <ListBox ItemTemplate="{DynamicResource PlatMaquette}" Background="PapayaWhip" Margin="40,84,566,142"  x:Name="liste_plats"/>
+        <ListBox Background="PapayaWhip" Margin="565,84,41,141" ItemTemplate="{DynamicResource CommandeMaquette}" x:Name="liste_commande"/>
+        <Label Content="Panier" HorizontalAlignment="Left" Margin="303,167,0,0" VerticalAlignment="Top" Width="135" Height="24"/>
+        <Label Content="Plats" HorizontalAlignment="Left" Margin="40,55,0,0" VerticalAlignment="Top" Width="135" Height="24"/>
+        <Label Content="Historique des commandes" HorizontalAlignment="Left" Margin="574,55,0,0" VerticalAlignment="Top" Width="160" Height="24"/>
+        <Button Content="Retirer plat" Margin="377,162,303,262" Background="#ed5f5f" FontSize="12" FontFamily="Rockwell" Click="bouttonRetirer_Click"/>
+        <Button Content="Retour" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="#ed5f5f" Height="29" Width="59" Click="bouttonRetour_Click"/>
+
+
+
+
+
+
+
+
     </Grid>
-</Window>
+</Page>

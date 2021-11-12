@@ -7,8 +7,43 @@
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Inventaire">
+    <Page.Resources>
+        <DataTemplate x:Key="AlimentMaquette">
+            <StackPanel Orientation="Horizontal">
+                <Label FontWeight="Bold" Content="{Binding Nom}"/>
+                <Label Content="{Binding Quantite}"/>
+                <Label Content="{Binding ExpireLe}"/>
+                <Label Content="{Binding Unite}"/>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
 
-    <Grid>
-        
+    <Grid ShowGridLines="True" Background="NavajoWhite">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="100"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="141*"/>
+            <RowDefinition Height="19*"/>
+            <RowDefinition Height="33*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Content="Inventaire" Foreground="#FF5F8C5A" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Rockwell" FontSize="36" FontWeight="Normal" Height="52" Width="178"/>
+        <ListBox ItemTemplate="{DynamicResource AlimentMaquette}" Background="PapayaWhip" Grid.Column="1" Grid.Row="1" x:Name="liste_aliments" HorizontalAlignment="Center" VerticalAlignment="Center" Width="580" Height="262"/>
+        <Button Content="Créer" Grid.Column="1" Grid.Row="3" Margin="10,10,452,28" Background="LightGreen" FontSize="12" FontFamily="Rockwell" Click="boutonCreer_Click"/>
+        <Label Margin="4,5,540,5" Grid.Row="2" Grid.Column="1">Nom</Label>
+        <TextBox x:Name="creer_nom_aliment" Text="{Binding ElementName=liste_aliments, Path=SelectedItem.Nom, Mode=OneWay}" TextWrapping="Wrap" Grid.Column="1" Margin="40,8,467,8" Grid.Row="2"/>
+        <TextBox x:Name="creer_quantite_aliment" Text="{Binding ElementName=liste_aliments, Path=SelectedItem.Quantite, Mode=OneWay}" TextWrapping="Wrap" Grid.Column="1" Margin="216,8,346,8" Grid.Row="2"/>
+        <TextBox x:Name="creer_date_expiration_aliment" Text="{Binding ElementName=liste_aliments, Path=SelectedItem.ExpireLe, Mode=OneWay}" TextWrapping="Wrap" Grid.Column="1" Margin="323,8,175,8" Grid.Row="2"/>
+        <TextBox x:Name="creer_unite_aliment" Text="{Binding ElementName=liste_aliments, Path=SelectedItem.Unite, Mode=OneWay}" TextWrapping="Wrap" Grid.Column="1" Margin="495,8,10,8" Grid.Row="2"/>
+        <Label Margin="152,5,374,5" Grid.Row="2" Grid.Column="1" Content="Quantité"/>
+        <Label Margin="254,5,266,5" Grid.Row="2" Grid.Column="1" Content="Expire le"/>
+        <Label Margin="432,5,105,5" Grid.Row="2" Grid.Column="1" Content="Unité"/>
+        <Button Content="Supprimer" Grid.Column="1" Grid.Row="3" Margin="452,10,10,28" Background="#ed5f5f" FontSize="12" FontFamily="Rockwell" Click="boutonSupprimer_Click"/>
+        <Button Content="Modifier" Grid.Column="1" Grid.Row="3" Margin="225,10,237,28" Background="LightGreen" FontSize="12" FontFamily="Rockwell" Click="boutonModifier_Click"/>
+        <Button Content="Retour" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Background="#ed5f5f" Height="29" Width="59" Click="bouttonRetour_Click"/>
+
     </Grid>
 </Page>

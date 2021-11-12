@@ -1,0 +1,27 @@
+[
+    {
+        "Nom": "Patate",
+        "Quantite": 20,
+        "Unite": "??",
+        "ExpireLe": {
+            "$date": "2021-11-20"
+        }
+    },
+    {
+        "Nom": "Piment",
+        "Quantite": 6,
+        "Unite": "??",
+        "ExpireLe": {
+            "$date": "2021-12-05"
+        }
+    },
+    {
+        "Nom": "Pomme",
+        "Quantite": 10,
+        "Unite": "??",
+        "ExpireLe": {
+            "$date": "2021-11-07"
+        }
+    }
+
+]

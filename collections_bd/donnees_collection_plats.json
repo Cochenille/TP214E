@@ -1,0 +1,49 @@
+[
+    {
+    "Nom": "Spaghetti",
+    "Prix": 13.45,
+    "Recette" : [
+        {
+            "Nom": "Patate",
+            "Quantite": 2,
+            "Unite": "??",
+            "ExpireLe": {
+                "$date": "2021-11-20"
+            }
+        },
+        {
+            "Nom": "Piment",
+            "Quantite": 1,
+            "Unite": "??",
+            "ExpireLe": {
+                "$date": "2021-12-05"
+            }
+        }
+    ]
+    },
+
+    {
+    "Nom": "Pizza",
+    "Prix": 16.99,
+    "Recette" : [
+        {
+            "Nom": "Patate",
+            "Quantite": 2,
+            "Unite": "??",
+            "ExpireLe": {
+                "$date": "2021-11-20"
+            }
+        },
+        {
+            "Nom": "Pomme",
+            "Quantite": 2,
+            "Unite": "??",
+            "ExpireLe": {
+                "$date": "2021-11-07"
+            }
+        }
+    ]
+    }
+    
+
+]
