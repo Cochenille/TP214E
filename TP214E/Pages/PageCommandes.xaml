@@ -1,12 +1,75 @@
-﻿<Window x:Class="TP214E.Pages.PageCommandes"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TP214E.Pages"
-        mc:Ignorable="d"
-        Title="PageCommandes" Height="450" Width="800">
-    <Grid>
+﻿<Page x:Class="TP214E.Pages.PageCommandes"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:TP214E.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageCommandes">
+    <Page.Resources>
+        <Style x:Key="survolBoutonPrincipal" TargetType="Button">
+            <Setter Property="Background" Value="#FF5F8C5A"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Height" Value="Auto" />
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" BorderBrush="White" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
         
+    </Page.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <GroupBox x:Name="gbCommande" Header="Commande" Grid.Row="0" Height="auto" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Foreground="#FF00FF23">
+                <ListBox x:Name="lbCommande">
+                </ListBox>
+                
+            </GroupBox>
+            <Label Grid.Row="1" x:Name="lblTotal" Content="" Background="Black" Foreground="White" HorizontalContentAlignment="Right"/>
+            <Button Grid.Row="2" x:Name="btnRetirer" Click="btnRetirer_Click">Retirer</Button>
+            <Button Grid.Row="3" x:Name="btnCommander" Click="btnCommander_Click">Commander</Button>
+            <Button Grid.Row="4" x:Name="btnHistorique" Click="btnHistorique_Click">Historique</Button>
+            <Button Grid.Row="5" x:Name="btnRetour" Click="btnRetour_Click">Retour</Button>
+        </Grid>
+        <Grid Grid.Column="1" Background="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="20"/>
+            </Grid.RowDefinitions>
+            <StackPanel x:Name="sp1" Grid.Column="1" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <StackPanel x:Name="sp2" Grid.Column="2" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <StackPanel x:Name="sp3" Grid.Column="3" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+            <StackPanel x:Name="sp4" Grid.Column="4" Grid.Row="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"/>
+        </Grid>
     </Grid>
-</Window>
+</Page>

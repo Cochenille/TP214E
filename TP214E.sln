@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TP214E", "TP214E\TP214E.csproj", "{C1D1E20F-53FC-4B42-B5EA-0EB5F5B64DBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP214ETests", "TP214ETests\TP214ETests.csproj", "{0083F103-3EAD-4033-A63A-65686BB3859E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TP214ETests", "TP214ETests\TP214ETests.csproj", "{0083F103-3EAD-4033-A63A-65686BB3859E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
